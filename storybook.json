@@ -8,12 +8,30 @@
       "about": "スキャン結果の状態",
       "kind": "radio",
       "options": [
-        { "value": "loading", "label": "スキャン中" },
-        { "value": "empty", "label": "なし" },
-        { "value": "few", "label": "少数(5件)" },
-        { "value": "many", "label": "多数(40件)" },
-        { "value": "long", "label": "長い名前・深いパス" },
-        { "value": "error", "label": "スキャン失敗" }
+        {
+          "value": "loading",
+          "label": "スキャン中"
+        },
+        {
+          "value": "empty",
+          "label": "なし"
+        },
+        {
+          "value": "few",
+          "label": "少数(5件)"
+        },
+        {
+          "value": "many",
+          "label": "多数(40件)"
+        },
+        {
+          "value": "long",
+          "label": "長い名前・深いパス"
+        },
+        {
+          "value": "error",
+          "label": "スキャン失敗"
+        }
       ],
       "default": "few"
     },
@@ -23,12 +41,79 @@
       "about": "既に space があるリポジトリの状態(●の色・ブランチ)",
       "kind": "radio",
       "options": [
-        { "value": "none", "label": "なし" },
-        { "value": "some", "label": "いくつか(idle/working)" },
-        { "value": "blocked", "label": "blocked / done を含む" },
-        { "value": "all", "label": "すべて開いている" }
+        {
+          "value": "none",
+          "label": "なし"
+        },
+        {
+          "value": "some",
+          "label": "いくつか(idle/working)"
+        },
+        {
+          "value": "blocked",
+          "label": "blocked / done を含む"
+        },
+        {
+          "value": "all",
+          "label": "すべて開いている"
+        }
       ],
       "default": "some"
+    },
+    {
+      "key": "sessions",
+      "label": "開いている space のセッション数",
+      "about": "tab 名(フォルダ名 / claude 2 …)と一覧の「open · N」に効く",
+      "kind": "radio",
+      "options": [
+        {
+          "value": "one",
+          "label": "1つ"
+        },
+        {
+          "value": "many",
+          "label": "3つ(次は claude 4)"
+        }
+      ],
+      "default": "one"
+    },
+    {
+      "key": "others",
+      "label": "リポジトリ以外の space",
+      "about": "スキャンに出ない、開いている space(~ など・リモート)",
+      "kind": "radio",
+      "options": [
+        {
+          "value": "none",
+          "label": "なし"
+        },
+        {
+          "value": "local",
+          "label": "このコンピュータのみ"
+        },
+        {
+          "value": "all",
+          "label": "リモートも含む"
+        }
+      ],
+      "default": "local"
+    },
+    {
+      "key": "dup",
+      "label": "同じフォルダに複数の space",
+      "about": "1行にまとめて「open · N · M spaces」と出す(先頭の開いている行に効く)",
+      "kind": "radio",
+      "options": [
+        {
+          "value": "none",
+          "label": "なし"
+        },
+        {
+          "value": "multi",
+          "label": "2つある"
+        }
+      ],
+      "default": "none"
     },
     {
       "key": "query",
@@ -36,9 +121,18 @@
       "about": "入力欄に打った文字の代わり",
       "kind": "radio",
       "options": [
-        { "value": "none", "label": "空" },
-        { "value": "match", "label": "一致あり(herdr)" },
-        { "value": "nomatch", "label": "一致なし" }
+        {
+          "value": "none",
+          "label": "空"
+        },
+        {
+          "value": "match",
+          "label": "一致あり(herdr)"
+        },
+        {
+          "value": "nomatch",
+          "label": "一致なし"
+        }
       ],
       "default": "none"
     }
